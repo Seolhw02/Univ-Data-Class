@@ -31,7 +31,7 @@
 
 `time`은 환자를 얼마나 오래 관찰했는지를 뜻합니다. 사망한 환자는 사망 시점에 관찰이 끝나므로 관찰 기간이 짧을 수밖에 없습니다. 즉 `time`이 짧다는 것은 원인이라기보다 **결과(사망)의 흔적**이고, 환자를 처음 진료하는 시점에는 알 수 없는 값입니다.
 
-![생존/사망별 관찰 기간](images/time_by_outcome.png)
+![생존/사망별 관찰 기간](<심부전 환자 생존 예측 미니 프로젝트/images/time_by_outcome.png>)
 
 ### 3. 수정한 분석
 
@@ -44,7 +44,7 @@
 
 ### `time` 포함 여부에 따른 성능 차이
 
-![time 포함/제외 ROC-AUC 비교](images/auc_with_without_time.png)
+![time 포함/제외 ROC-AUC 비교](<심부전 환자 생존 예측 미니 프로젝트/images/auc_with_without_time.png>)
 
 | 모델 | ROC-AUC (time 포함) | ROC-AUC (time 제외) |
 |---|---|---|
@@ -64,7 +64,7 @@
 | Decision Tree | 0.686 | 0.509 | 0.461 | 0.477 | 0.627 |
 | Random Forest | **0.729** | **0.605** | 0.429 | 0.492 | 0.762 |
 
-![ROC 곡선](images/roc_no_time.png)
+![ROC 곡선](<심부전 환자 생존 예측 미니 프로젝트/images/roc_no_time.png>)
 
 표의 값은 5개 검증 fold 결과의 평균이며, 정확도·정밀도·재현율·F1은 기본 임계값 0.5 기준입니다. ROC 곡선 범례의 AUC는 5개 fold의 검증 예측을 하나로 합쳐 계산한 값이라 표의 fold 평균값과 소수점 둘째 자리에서 조금 다를 수 있습니다.
 
@@ -72,7 +72,7 @@ Random Forest는 정확도가 가장 높았지만, 사망 환자를 놓치지 �
 
 ### 주요 변수 (`time` 제외 Random Forest, 순열 중요도)
 
-![변수 중요도](images/feature_importance_no_time.png)
+![변수 중요도](<심부전 환자 생존 예측 미니 프로젝트/images/feature_importance_no_time.png>)
 
 각 검증 fold에서 변수 하나의 값을 무작위로 섞었을 때 ROC-AUC가 얼마나 떨어지는지로 중요도를 측정했습니다. 혈청 크레아티닌, 심박출률, 나이 순으로 기여가 컸고, 나머지 변수는 0에 가까워 이 데이터에서는 예측에 뚜렷하게 기여하지 않았습니다. (Random Forest의 기본 불순도 기반 중요도에서는 혈소판·혈청 나트륨도 높게 나오지만, 이 방식은 연속형 변수를 과대평가하는 경향이 있어 순열 중요도를 사용했습니다.)
 
