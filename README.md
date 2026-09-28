@@ -1,4 +1,4 @@
-# 심부전 환자 생존 예측: 데이터 누수 점검과 재평가
+# 심부전 환자 생존 예측
 
 > 임상 데이터 299건으로 심부전 환자의 사망 여부를 예측하는 모델을 만들고, **처음 결과에서 가장 중요한 변수였던 "추적 관찰 기간(time)"이 결과를 미리 반영한 변수(데이터 누수)임을 확인**해 이를 제거한 뒤 교차검증으로 다시 평가한 프로젝트입니다.
 
@@ -102,13 +102,10 @@ jupyter notebook analysis.ipynb
 
 ```
 ├── README.md
-├── analysis.ipynb                           # 누수 점검 및 재평가 분석
-├── EDA_proj.ipynb                           # 처음 분석 (탐색적 분석, 발표 버전)
+├── analysis.ipynb                         
 ├── heart_failure_clinical_records_dataset.csv
 ├── results.csv
 ├── images/
-└── presentation/                            # 수업 발표자료
 ```
 
 ---
-2026년 1학기 기말 프로젝트를 바탕으로, 분석 과정의 문제를 점검해 보완했습니다.
