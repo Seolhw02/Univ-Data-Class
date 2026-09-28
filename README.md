@@ -105,7 +105,6 @@ python analysis.py
 ├── heart_failure_clinical_records_dataset.csv
 ├── results.csv
 ├── images/
-└── presentation/                            # 수업 발표자료
 ```
 
 ---
