@@ -107,8 +107,6 @@ python analysis.py
 ├── heart_failure_clinical_records_dataset.csv
 ├── results.csv
 ├── images/
-└── presentation/                            # 수업 발표자료
 ```
 
 ---
-2026년 1학기 기말 프로젝트를 바탕으로, 분석 과정의 문제를 점검해 보완했습니다.
