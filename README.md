@@ -15,7 +15,7 @@
 
 ## 데이터
 
-- 출처: Kaggle, *Heart Failure Clinical Records Dataset*
+- 출처: Kaggle 공개 임상 데이터셋(Heart Failure Clinical Records, 원출처 UCI, 환자 299명)
 - 규모: 환자 299명, 입력 변수 12개, 목표 변수 1개(`DEATH_EVENT`, 사망 = 1)
 - 사망 비율: 32.1% (불균형 데이터)
 - 변수: 나이, 빈혈, CPK 효소, 당뇨, 심박출률, 고혈압, 혈소판, 혈청 크레아티닌, 혈청 나트륨, 성별, 흡연, 추적 관찰 기간(`time`)
